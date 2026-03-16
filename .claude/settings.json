@@ -1,0 +1,8 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "hooks": [
+    { "matcher": "Edit|Write", "hooks": [{ "type": "command", "command": "if echo \"$CLAUDE_FILE_PATHS\" | grep -qE '\\.(ts|tsx|js|jsx|json|md|css|html|yaml|yml)$'; then npx prettier --write \"$CLAUDE_FILE_PATHS\" 2>/dev/null; fi" }] },
+    { "matcher": "Edit|Write", "hooks": [{ "type": "command", "command": "if echo \"$CLAUDE_FILE_PATHS\" | grep -qE '\\.(ts|tsx)$'; then npx tsc --noEmit --skipLibCheck 2>/dev/null || echo 'TypeScript errors detected'; fi" }] },
+    { "matcher": "Edit|Write", "hooks": [{ "type": "command", "command": "if echo \"$CLAUDE_FILE_PATHS\" | grep -qE '\\.py$'; then ruff check --fix \"$CLAUDE_FILE_PATHS\" 2>/dev/null && black --quiet \"$CLAUDE_FILE_PATHS\" 2>/dev/null; fi" }] }
+  ]
+}

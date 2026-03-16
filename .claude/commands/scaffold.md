@@ -1,0 +1,1 @@
+Scaffold a new component or module. Create files with proper typing, documentation, and a test file with happy-path + error tests. Infer the stack from the codebase or use the argument if specified. $ARGUMENTS

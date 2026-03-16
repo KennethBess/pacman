@@ -1,0 +1,1 @@
+Review the recent changes. For each file check: bugs, error handling, security issues, convention compliance (see CLAUDE.md), documentation, and typing. Summarize with: red (critical), yellow (warnings), green (looks good). If OpenSpec specs exist, verify implementation matches spec. $ARGUMENTS
