@@ -1,5 +1,5 @@
 import { Position, Direction, GhostName } from "../types";
-import { GHOST_SCATTER_TARGETS, GHOST_START_POSITIONS } from "../config";
+import { GHOST_SCATTER_TARGETS } from "../config";
 import { createGhost, GhostData } from "../ghost";
 
 export function createPokey(): GhostData {

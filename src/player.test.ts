@@ -30,8 +30,6 @@ describe("Player", () => {
     it("does not move into walls", () => {
       // Player at start, try to move up into wall area
       setPlayerDirection(player, Direction.UP);
-      const startTile = { ...player.tile };
-
       // Multiple small updates
       for (let i = 0; i < 10; i++) {
         updatePlayer(player, maze, 1 / 60);

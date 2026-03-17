@@ -1,6 +1,5 @@
 import { describe, it, expect, beforeEach } from "vitest";
 import {
-  GhostData,
   createWaveTimer,
   updateWaveTimer,
   enterFrightened,
@@ -12,7 +11,7 @@ import { createSpeedy } from "./ghosts/speedy";
 import { createBashful } from "./ghosts/bashful";
 import { createPokey } from "./ghosts/pokey";
 import { Maze } from "./maze";
-import { GhostState, GhostName, Direction } from "./types";
+import { GhostState, Direction } from "./types";
 
 describe("Ghost AI", () => {
   let maze: Maze;

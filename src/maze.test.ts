@@ -1,6 +1,6 @@
 import { describe, it, expect, beforeEach } from "vitest";
 import { Maze } from "./maze";
-import { TileType, Direction } from "./types";
+import { TileType } from "./types";
 import { MAZE_LAYOUT } from "./maze-data";
 
 describe("Maze", () => {

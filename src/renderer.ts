@@ -290,7 +290,6 @@ export class Renderer {
     // Progress: 1 at start of dying, 0 at end
     const progress = Math.max(0, state.phaseTimer / DYING_DURATION);
     // Pac-Man collapses: mouth opens wider as he shrinks
-    const sweepAngle = Math.PI * 2 * progress;
     const shrinkRadius = radius * progress;
 
     if (shrinkRadius <= 0) return;
@@ -352,7 +351,6 @@ export class Renderer {
 
   private renderGhostBody(cx: number, cy: number, radius: number): void {
     const ctx = this.ctx;
-    const top = cy - radius;
     const bottom = cy + radius;
     const left = cx - radius;
     const right = cx + radius;
